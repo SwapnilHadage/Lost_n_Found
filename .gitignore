@@ -1,0 +1,31 @@
+# ============================================
+# NetBeans + Ant Java Web Application
+# ============================================
+
+# === Build output directories (auto-generated) ===
+build/
+dist/
+
+# === NetBeans generated project files (recreated automatically) ===
+nbproject/private/
+nbproject/build-impl.xml
+nbproject/genfiles.properties
+
+# === Compiled Java classes and packaged artifacts ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === Temporary, log, and backup files ===
+*.log
+*.tmp
+*.bak
+*.swp
+
+# === OS-specific junk ===
+.DS_Store
+Thumbs.db
+
+# === Optional: NetBeans cache folders (rare but safe to ignore) ===
+nbbuild/
