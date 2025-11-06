@@ -33,14 +33,22 @@ public class Upload extends HttpServlet {
                     ps.setString(3,"pending");
                 }
                 ps.executeUpdate();
-                out.println("<p style='color:green;'>Image uploaded successfully!</p>");
+//                            if(rows > 0){
+//                request.setAttribute("message", "Delete Successfully!");
+//            } else {
+//                request.setAttribute("message", "No Record Found");
+//            }
+//                
+//            RequestDispatcher rd = request.getRequestDispatcher("staffUi.jsp");
+//            rd.forward(request, response);
+                request.setAttribute("message","Image uploaded successfully!");
                 RequestDispatcher rd;
                 if(isStudent){
                     rd = request.getRequestDispatcher("studentUi.jsp");
                 }else{
                     rd = request.getRequestDispatcher("staffUi.jsp");
                 }
-                rd.include(request, response);
+                rd.forward(request, response);
                 con.close();
             } catch (SQLException ex){
                 ex.printStackTrace();

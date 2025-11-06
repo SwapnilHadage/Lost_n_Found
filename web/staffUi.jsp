@@ -71,7 +71,12 @@
       color: #333;
       margin-bottom: 30px;
     }
-
+    
+    input{
+        border: none;
+        
+    }
+    
     /* Upload form */
     .found-items {
       background: #fff;
@@ -111,7 +116,11 @@
     .found-items button:hover {
       background: #0056b3;
     }
-
+    
+    #messageBox{
+       text-align: center;
+       height: 2rem;
+    }
     /* Lost items list */
     
     .main-content{
@@ -222,9 +231,22 @@
         <button type="submit">Upload</button>
       </form>
     </div>
+    <div id="messageBox">
+        <% 
+            String msg = (String) request.getAttribute("message");
+            if (msg != null && !msg.isEmpty()) {
+        %>
+            <p><%= msg %></p>
+        <% 
+            } 
+        %>
+    </div>
+
 
     <div class="main-content">
+        
         <div class="approved-items">
+            <div class=" header-3">Found Items</div>
       <% 
         try {
           Connection con = DB.getConnection();
@@ -237,7 +259,7 @@
             String imageDescription = rs.getString("name");
             Timestamp uploadDate = rs.getTimestamp("upload_date");
       %>
-      <div class=" header-3">Found Items</div>
+      
       <div class="lost-item">
         <img src="ImageServlet?id=<%=id%>" alt="Loading Image" loading="lazy" />
         <p class="img-desc"><%= imageDescription %></p>
@@ -255,6 +277,7 @@
     </div>
     
      <div class="pending-items ">
+         <div class=" header-3">Upload Requests</div>
       <% 
         try {
           Connection con = DB.getConnection();
@@ -268,7 +291,7 @@
             Timestamp uploadDate = rs.getTimestamp("upload_date");
             String status = rs.getString("status");
       %>
-      <div class=" header-3">Upload Requests</div>
+      
       <div class="lost-item">
         <img src="ImageServlet?id=<%=id%>" alt="Loading Image" loading="lazy" />
         <p class="img-desc"><%= imageDescription %></p>

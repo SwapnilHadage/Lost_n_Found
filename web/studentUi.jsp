@@ -57,6 +57,7 @@
           text-align: left;
       }
 
+
     main {
       max-width: 1000px;
       margin: 40px auto;
@@ -68,6 +69,14 @@
       text-align: center;
       color: #333;
       margin-bottom: 30px;
+    }
+    
+    #messageBox{
+       padding-left:5rem;
+       padding-right: 5rem;
+       padding-bottom: 0.5rem;
+       text-align: center;
+       height: 2rem;
     }
 
     /* Upload form */
@@ -184,7 +193,7 @@
             <%= user %></h1>
         </div>
     </header>
-    
+        
     <main>
         <div class="found-items">
           <form action="Upload" method="post" enctype="multipart/form-data">
@@ -193,6 +202,16 @@
             <button type="submit">Upload</button>
           </form>
         </div>
+        <div id="messageBox">
+        <% 
+            String msg = (String) request.getAttribute("message");
+            if (msg != null && !msg.isEmpty()) {
+        %>
+            <p><%= msg %></p>
+        <% 
+            } 
+        %>
+    </div>
 
     <div class="lost-items">
       <% 

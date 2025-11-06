@@ -26,14 +26,14 @@ public class DeleteObject extends HttpServlet {
             
             int rows = ps.executeUpdate();
             
-            if(rows>0){
-                out.println("<p>Delete Successfully!</p>");
-            }else{
-                out.println("<p>No Record Found</p>");
+            if(rows > 0){
+                request.setAttribute("message", "Delete Successfully!");
+            } else {
+                request.setAttribute("message", "No Record Found");
             }
                 
             RequestDispatcher rd = request.getRequestDispatcher("staffUi.jsp");
-            rd.include(request, response);
+            rd.forward(request, response);
         }catch(Exception e){
             out.println(e);
         }
