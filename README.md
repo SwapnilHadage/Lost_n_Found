@@ -17,12 +17,11 @@ This application bridges that gap by enabling users to upload details of found i
 - 👤 **User Features**
   - Upload details of found items (title, description, image, location)
   - Browse lost and found listings
-  - Report lost items for visibility
 
 - 🧑‍💼 **Staff Features**
   - Approve or delete found item submissions
   - Post or manage items directly without needing approval
-  - Update item status (returned, pending, found)
+
 
 - ⚙️ **General**
   - Clean and responsive user interface
@@ -40,7 +39,7 @@ This application bridges that gap by enabling users to upload details of found i
 | **Backend** | JSP, Servlets (Java) |
 | **Database** | MySQL |
 | **Server** | Apache Tomcat |
-| **IDE** | Eclipse / IntelliJ IDEA |
+| **IDE** | Apache NetBeans |
 
 ---
 
@@ -50,7 +49,7 @@ This application bridges that gap by enabling users to upload details of found i
 git clone https://github.com/your-username/Lost-and-Found-WebApp.git
 
 ### 2️⃣ Import into your IDE
-Open Eclipse or IntelliJ IDEA
+Open Eclipse or Apache NetBeans
 Choose Import > Existing Project
 Select the cloned repository folder
 
@@ -67,18 +66,26 @@ Deploy the project on Tomcat
 Access it locally via
 👉 http://localhost:8080/LostAndFound
 
-📸 Screenshots / Demo
+### 📸 Screenshots / Demo
 
-(Add screenshots or a short demo video here)
-Example:
 
-Homepage
+Login:
 
-Upload Found Item Page
+<img src="preview_images/1.jpg" alt="Preview" width="400"/>
 
-Staff Dashboard
 
-Database Table View
+
+Student Dashboard:
+
+<img src="preview_images/2.jpg" alt="Preview" width="400"/>
+
+
+
+Staff Dashboard:
+
+<img src="preview_images/3.jpg" alt="Preview" width="400"/>
+
+
 
 ### 🧠 Learning Highlights
 
