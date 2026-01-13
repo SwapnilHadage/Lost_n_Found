@@ -46,7 +46,7 @@ This application bridges that gap by enabling users to upload details of found i
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the repository
-git clone https://github.com/your-username/Lost-and-Found-WebApp.git
+git clone https://github.com/SwapnilHadage/Lost-and-Found-WebApp.git
 
 ### 2️⃣ Import into your IDE
 Open Eclipse or Apache NetBeans
