@@ -95,7 +95,7 @@ Integration of JSP and Servlets with backend logic
 
 Performing CRUD operations via JDBC and MySQL
 
-Session management and request-response handling
+Request-response handling
 
 Understanding full-stack architecture and component interaction
 
